@@ -1,17 +1,30 @@
 {
-    "name": "-asdf",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-      "start": "node index.js"
-    },
-    "engines": {
-      "node": "12.x"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-      "aoi.js": "^4.6.0"
-    }
-  }
+  "name": "-adc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "16.6"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aoi.js": "^5.1.0",
+    "ytdl-core-discord": "^1.3.1"
+  },
+  "devDependencies": {
+    "node": "^16.14.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ParziDev/Aoijs-V5-Bos-Altyapi.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/ParziDev/Aoijs-V5-Bos-Altyapi/issues"
+  },
+  "homepage": "https://github.com/ParziDev/Aoijs-V5-Bos-Altyapi#readme",
+  "description": ""
+}
