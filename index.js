@@ -1,27 +1,28 @@
-const DBD = require("aoi.js");
-const bot = new DBD.Bot({
-  token: process.env['token'],
-  prefix: "PREFİX",
- })
-bot.onMessage()
-bot.onJoined()
+const aoijs = require("aoi.js")
+const bot = new aoijs.Bot({
+token: process.env['token'], 
+prefix: ["$getServerVar[prefix]", "<@$clientID>", "<@!$clientID>"], 
+intents: "all" 
+}) 
+
+const loader = new aoijs.LoadCommands(bot)
+loader.load(bot.cmd,"./komutlar/")
+
+////////// Callbackler \\\\\\\\\\
+bot.onJoin()
+bot.onInviteCreate()
 bot.onLeave()
+bot.onMessage()
 
-const fs = require('fs')
-var reader = fs.readdirSync("./komutlar").filter(file => file.endsWith(".js"))
-for (const file of reader) {
-  const command = require(`./komutlar/${file}`)
-  bot.command({
-    name: command.name,
-    aliases: command.aliases,
-    bkz: command.bkz,
-    code: command.code
-  });
-} 
+////////// Durum \\\\\\\\\\
+bot.status({
+text:"$username[$clientid]",
+type:"PLAYING",
+status:"dnd",
+time: 12
+})
 
-bot.command({
-  name:"ping",
-  code:`
-Ping: \`$botPing\`
-`
+////////// Variableler \\\\\\\\\\
+bot.variables({
+prefix:"prefix"
 })
