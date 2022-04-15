@@ -10,13 +10,11 @@ loader.load(bot.cmd,"./komutlar/")
 
 ////////// Callbackler \\\\\\\\\\
 bot.onJoin()
-bot.onInviteCreate()
-bot.onLeave()
 bot.onMessage()
 
 ////////// Durum \\\\\\\\\\
 bot.status({
-text:"$username[$clientid]",
+text:"Boş altyapı işte aw",
 type:"PLAYING",
 status:"dnd",
 time: 12
