@@ -1,14 +1,20 @@
 {
-  "name": "magicia-rp-v2",
+  "name": "-adc",
   "version": "1.0.0",
-  "description": "",
-  "main": "bot.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "16.6"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aoi.js": "^5.5.5"
+    "aoi.js": "^5.5.5",
+    "ytdl-core-discord": "^1.3.1"
+  },
+  "devDependencies": {
+    "node": "^16.14.2"
   }
 }
